@@ -289,7 +289,7 @@ performance on image synthesis on the LSUN-Church and human-face datasets.
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Quantitative Results</h2>
+        <h2 class="title is-3">Results</h2>
 
         <!-- Interpolating. -->
         <h3 class="title is-4">Reconstruction</h3>
@@ -329,8 +329,10 @@ fewer GFlops </b>due to its smaller decoder and the efficiency gained from utili
         <h3 class="title is-4">Generation</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            The <b>precision </b>of our
+generated images is significantly higher than others, indicating a substantial reduction of low-quality
+samples in our results. While our recall is almost the same as StyleGAN2. Our method also gets competitive results on
+FID, CLIP-FID and Inception Scores.
           </p>
         </div>
         <div class="column">
@@ -348,6 +350,28 @@ fewer GFlops </b>due to its smaller decoder and the efficiency gained from utili
             <p align="center">
               Quantitative results of generation on LSUN-Church dataset.
             </p>
+          </div>
+        </div>
+        <!--/ Re-rendering. -->
+
+        <!-- Nearest Neighbour -->
+        <h3 class="title is-4">Nearest Neighbour</h3>
+        <div class="content has-text-justified">
+          <p>
+            Although our method has much higher precision scores than previous methods, we show the nearest neighbour
+            search by LPIPS to demonstrate that our generated samples are unique and <b>not</b> mere retrievals from the training dataset.
+            In the following images, the <b>leftmost</b> images in each row are generated images from our method and the rest images in each row
+            are the nearest neighbour search results.
+          </p>
+        </div>
+        <div class="column">
+          <div class="content_hscroll">
+            <img src="static/images/ffhq_nearest_sup_show.png">
+          </div>
+        </div>
+        <div class="column">
+          <div class="content_hscroll">
+            <img src="static/images/lsun_nearest_sup_show.png">
           </div>
         </div>
         <!--/ Re-rendering. -->

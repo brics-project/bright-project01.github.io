@@ -161,3 +161,9 @@ body {
   margin-right: auto;
   width: 70%;
 }
+
+.column .content_hscroll{
+  width: auto;
+  height: 400px;
+  overflow-y: scroll;
+}
